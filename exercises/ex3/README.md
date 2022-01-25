@@ -19,6 +19,8 @@ Further information can be found here: [CDS Projection View](https://help.sap.co
 
 3. Assign a transport request and choose **Finish** (please note: clicking on **Next** in the _Selection of Transport Request_ step, you get to the optional _Templates_ step in which you can choose from predefined templates).
 
+    ![Create Travel BO projection view](images/ctravelCDS03.png)
+
     Replace the travel data definition in the editor with the code snippet provided below and replace all occurrences of  `####` with your group ID. 
 
     Save ![save icon](images/adt_save.png) the changes, but **DO NOT** yet activate the travel BO projection view.
@@ -70,7 +72,7 @@ Further information can be found here: [CDS Projection View](https://help.sap.co
 
     The data definition should look as follows: 
 
-    ![Create Travel BO projection view](images/ctravelCDS03.png)
+    ![Create Travel BO projection view](images/ctravelCDS04.png)
     
     The Travel projection view exposes all associations that are defined in the underlying travel interface view. However, the composition to the booking BO child node (**`_Booking`**) must be redirected to the Booking BO projection view. This is done using the **`redirected to composition child`** statement.
 
@@ -78,13 +80,15 @@ Further information can be found here: [CDS Projection View](https://help.sap.co
 
 1. Right-click on your Booking BO view (aka interface view) **`ZI_RAP_BOOKING_####`** and choose **New Data Definition** from the context menu.
  
-    ![Create Booking BO projection view](images/cbookingCDS01.png)
+    ![Create Booking BO projection view](images/cbookingCDS04.png)
 
 2.  Maintain **`ZC_RAP_BOOKING_####`** (where `####` is your group ID) as name and a description (e.g. _Booking BO projection view_) in the creation wizard and choose **Next >** to continue.  
  
-    ![Create Booking BO projection view](images/cbookingCDS02.png)
+    ![Create Booking BO projection view](images/cbookingCDS05.png)
 
 3. Assign a transport request and choose **Finish**. Replace the booking data definition in the editor with the code snippet provided below and replace all occurrences of  `####` with your group ID. 
+
+    ![Create Booking BO projection view](images/cbookingCDS06.png)
 
     Save ![save icon](images/adt_save.png) the changes, but **DO NOT** yet activate the booking BO projection view.
     
@@ -136,7 +140,7 @@ Further information can be found here: [CDS Projection View](https://help.sap.co
 
     The data definition now looks as follows: 
     
-     ![Create Booking BO projection view](images/cbookingCDS03.png)
+     ![Create Booking BO projection view](images/cbookingCDS07.png)
      
      The association to the travel BO parent node has been redirected to the Travel BO projection view using the **`redirect to parent`** statement.
 
@@ -145,7 +149,7 @@ To avoid error during the activation, both new CDS projection views – i.e. Tra
 
 1.	Choose **`Activate All`** ![activate all icon](images/adt_activate_all.png) or use the shortcut **Ctrl+Shift+F3** to active both CDS views together.
  
-    ![Activate CDS Data Model Projection](images/cactivate01.png)
+    ![Activate CDS Data Model Projection](images/cactivate02.png)
 
     Your projected CDS data model consisting of the Travel BO projection view and the Booking BO projection view is now activated.
     

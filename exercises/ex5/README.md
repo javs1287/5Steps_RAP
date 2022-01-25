@@ -18,7 +18,10 @@ The service definition specifies the service scope, i.e. the relevant entity set
  
     ![Create Service Definition](images/servicedefinition02.png)
               
-3.	Assign a transport request and choose **Finish**. Replace the code in the editor with the code snippet provided below. Do not forget to replace all the occurrences of `####` with your group ID.
+3.	Assign a transport request
+    ![Create Service Definition](images/servicedefinition03.png)
+
+4.	Assign a transport request and choose **Finish**. Replace the code in the editor with the code snippet provided below. Do not forget to replace all the occurrences of `####` with your group ID.
  
     <pre>
     @EndUserText.label: 'Serv Definition for Travel App'
@@ -38,9 +41,9 @@ The service definition specifies the service scope, i.e. the relevant entity set
     
     The service definition will look as follows:
 
-    ![Create Service Definition](images/servicedefinition03.png)
+    ![Create Service Definition](images/servicedefinition04.png)
 
-6.	Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the service definition.
+5.	Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the service definition.
 
 ## Exercise 5.2 - Create the Service Binding
 The service binding binds your service definition to the required protocol.

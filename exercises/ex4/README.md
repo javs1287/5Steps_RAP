@@ -16,6 +16,7 @@ Further information can be found here: [Metadata Extensions](https://help.sap.co
 2.	Maintain **`ZC_RAP_Travel_####`** (where `####` is your group ID) as name and a description (e.g. _UI Annotations for ZC\_RAP\_Travel\_####_) and choose _**Next >**_ to continue.
  
     ![Create Travel MDE](images/travelmde02.png)
+    ![Create Travel MDE](images/travelmde03.png)
 
 3.	Assign a transport request and choose **Finish** (please note: clicking on **Next** in the _Selection of Transport Request_ step, you get to the optional _Templates_ step in which you can choose from predefined templates). 
 
@@ -104,7 +105,7 @@ Further information can be found here: [Metadata Extensions](https://help.sap.co
 
      The results looks as follows:    
      
-    ![Create Travel MDE](images/travelmde03.png)
+    ![Create Travel MDE](images/travelmde04.png)
 
 4.	Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the changes.  
 

@@ -31,12 +31,22 @@ Further information can be found here: [Actions](https://help.sap.com/viewer/923
 4. Click on any of the 3 Quick Fix markers to open the Quick Fix context menu. Choose **Add all 3 missing methods of entity zi_rap_travel_#### in local handler class zbp_i_rap_travel_####->lhc_travel**.
 
     ![Actions](images/action02.png)
-
-5. This is to demonstrate how to add method declarations into existing behavior implementation classes when adding more capabilities to the business object. The adjusted behavior implementation class (**Local Types** tab) looks as follows:
-
     ![Actions](images/action03.png)
 
-6. Replace the **entire** code of the behavior implementation class **zbp_i_rap_travel_####** (Local Types tab) with the following coding and replace all occurrences of  `####` with your group ID:
+5. Your code should look like this
+    ![Actions](images/action04.png)
+
+
+6. Repeat these steps to create methods for ’rejectTravel‘ and ‘recalcTotalPrice‘ 
+    ![Actions](images/action05.png) 
+
+
+7.  Your completed code should look as follows:
+    This is to demonstrate how to add method declarations into existing behavior implementation classes when adding more capabilities to the business object. The adjusted behavior implementation class (**Local Types** tab) looks as follows:
+
+    ![Actions](images/action06.png)
+
+8. Replace the **entire** code of the behavior implementation class **zbp_i_rap_travel_####** (Local Types tab) with the following coding and replace all occurrences of  `####` with your group ID:
 
     > Find the source code here: [Behavior Implementation Class ZBP_I_RAP_TRAVEL_####](sources/EX7_1_CLAS_ZBP_I_RAP_TRAVEL.txt)
 
@@ -61,6 +71,8 @@ Those actions, that need to be available in the exposed service need to be added
 
 1. Open the behavior definition projection **`ZC_RAP_Travel_####`** – where **`####`** is your group ID – of your business object by either double-clicking on it in the _Project Explorer_ or using the shortcut **Ctrl+Shift+A** (_Open ABAP Development Object_).
 
+   ![Actions](images/action07.png)
+
 2. Add the following lines into the **Travel** entity, right after the `use association _Booking` statement.
 
     <pre>
@@ -70,7 +82,7 @@ Those actions, that need to be available in the exposed service need to be added
 
     Your behavior definition projection should look as follows:
     
-    ![Actions](images/action04.png)
+    ![Actions](images/action08.png)
     
 3. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the behavior definition.
 
@@ -78,10 +90,11 @@ Those actions, that need to be available in the exposed service need to be added
 For the actions to become available as buttons on the Fiori Elements UI you need to add corresponding UI annotations. This is done in the metadata extension for the travel entity.
 
 1. Open the metadata extension **`ZC_RAP_TRAVEL_####`** – where **`####`** is your group ID – by either double-clicking on it in the _Project Explorer_ or using the shortcut **Ctrl+Shift+A** (_Open ABAP Development Object_).
+    ![Actions](images/action09.png)
 
 2. Scroll down and find the UI annotations for the `TravelStatus` element. Remove the comments for both actions for the UI.lineItem as well as the UI.identification annotation. Your metadata extension should look as follows:
     
-    ![Actions](images/action05.png)
+    ![Actions](images/action10.png)
     
 3. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the metadata extension.
 
@@ -94,11 +107,13 @@ For the actions to become available as buttons on the Fiori Elements UI you need
    
    As a result, you can see that both new actions are available on the _list report_ as well as on the _object page_.
   
-    ![Preview App](images/action06.png)
+    ![Preview App](images/action12.png)
+
+    ![List REport](images/action13.png)
     
     Object Page:
     
-    ![Preview App](images/action07.png)
+    ![Preview App](images/action14.png)
 
 2.	Feel free to play around with the application – e.g. see how the instance specific feature control enables/disables the buttons dynamically.    
 

@@ -19,8 +19,9 @@ The behavior definition specifies the transactional capabilities of the business
     ![Create Behavior Definition](images/basebdef02.png)
     
 3.	Assign a transport request and choose **Finish**. A behavior definition skeleton for the entire composition hierarchy – i.e. the Travel entity **`ZI_RAP_Travel_####`** and the Booking entity **`ZI_RAP_Booking_####`**  in this scenario – is generated. 
-
     ![Create Behavior Definition](images/basebdef03.png)
+
+    ![Create Behavior Definition](images/basebdef04.png)
     
     **Short explanation:**
     -	**`managed`** is specified as implementation type at the top.
@@ -111,7 +112,7 @@ The behavior definition specifies the transactional capabilities of the business
 
      The results looks as follows - containing some errors/warnings that we will fix now:    
      
-    ![Create Behavior Definition](images/basebdef04.png)
+    ![Create Behavior Definition](images/basebdef05.png)
 
     **Short explanation:**
     -	**`with draft`** is specified next to the implementation type at the top. This enables the draft handling for this RAP business object.
@@ -125,15 +126,17 @@ The behavior definition specifies the transactional capabilities of the business
 
 1. Click on the Quick Fix icon in the line with the draft table declaration (`draft table zrap_dtrav_####`) to open the Quick Fix context menu. Double-click the entry **Create draft table zrap_dtrav_#### for entity zi_rap_travel_####**.
      
-    ![Create Behavior Definition](images/basebdef05.png)
+    ![Create Behavior Definition](images/basebdef06.png)
 
 2. In the _New Draft Table_ wizard leave the defaulted values and click **Next >**.
      
-    ![Create Behavior Definition](images/basebdef06.png)
+    ![Create Behavior Definition](images/basebdef07.png)
 
 3. Assign a transport request and choose **Finish**. The editor opens with the definition of the draft table based on the elements specified in the Travel interface CDS view.
 
-    ![Create Behavior Definition](images/basebdef07.png)
+    ![Create Behavior Definition](images/basebdef08.png)
+
+    ![Create Behavior Definition](images/basebdef09.png)
 
 4. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the table definition.
 
@@ -147,31 +150,35 @@ The behavior definition specifies the transactional capabilities of the business
 
 1. Go back to the behavior definition, and save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) it. Two warnings remain that we will fix now.
 
-    ![Create Behavior Definition](images/basebdef08.png)
+    ![Create Behavior Definition](images/basebdef10.png)
 
 2. Click on the Quick Fix icon in the line with the implementation class for the travel entity (`implementation in class zbp_i_rap_travel_#### unique`) to open the Quick Fix context menu. Double-click the entry **Create behavior implementation class zbp_i_rap_travel_####**. 
 
     Alternatively you can put the cursor on the highlighted statement (`zbp_i_rap_travel_####`) and press **Ctrl+1**. This also opens the Quick Fix context menu.
 
-    ![Create Behavior Definition](images/basebdef09.png)
+    ![Create Behavior Definition](images/basebdef11.png)
 
 3. In the _New Behavior Class_ wizard leave the defaulted values and click **Next >**.
 
-    ![Create Behavior Definition](images/basebdef10.png)
+    ![Create Behavior Definition](images/basebdef12.png)
 
 4. Assign a transport request and choose **Finish**. The editor opens with the defaulted behavior class.
 
-    ![Create Behavior Definition](images/basebdef11.png)
+    ![Create Behavior Definition](images/basebdef13.png)
 
-5. We will later on take care about the implementation. For now you can save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the class.
+5.   The editor opens with the defaulted behavior class.
 
-6. Go back to the behavior definition, scroll down to the booking entity and perform the same steps for the behavior implementation class **zbp_i_rap_booking_####**:
+      ![Create Behavior Definition](images/basebdef14.png)
+
+6. We will later on take care about the implementation. For now you can save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the class.
+
+7. Go back to the behavior definition, scroll down to the booking entity and perform the same steps for the behavior implementation class **zbp_i_rap_booking_####**:
    - Click on the Quick Fix icon in the line `implementation in class zbp_i_rap_booking_#### unique`
    - In the Quick Fix context menu double-click **Create behavior implementation class zbp_i_rap_booking_####**
    - Click **Next >** in the _New Behavior Class_ wizard, assign a transport request and click **Finish**
    - The class is defaulted with only a comment but no coding. That is fine.
 
-    ![Create Behavior Definition](images/basebdef12.png)
+    ![Create Behavior Definition](images/basebdef15.png)
 
     Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the class.
    

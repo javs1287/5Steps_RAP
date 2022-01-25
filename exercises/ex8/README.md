@@ -11,6 +11,7 @@ Further information can be found here: [Developing Determinations](https://help.
 
 ## Exercise 8.1 - Base Behavior Definition
 1. Open the base behavior definition **`ZI_RAP_Travel_####`** – where **`####`** is your group ID – of your business object by either double-clicking on it in the _Project Explorer_ or using the shortcut **Ctrl+Shift+A** (_Open ABAP Development Object_).
+  ![Actions](images/determination01.png)
 
 2. Add the following lines into the **Travel** entity, right after the previously defined actions.
 
@@ -29,11 +30,11 @@ Further information can be found here: [Developing Determinations](https://help.
 
     Your **Travel** entity in the base behavior definition should look as follows:
     
-    ![Actions](images/determination01.png)
+    ![Actions](images/determination02.png)
 
     Your **Booking** entity in the base behavior definition should look as follows:
     
-    ![Actions](images/determination02.png)
+    ![Actions](images/determination03.png)
 
 
 3. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the behavior definition.
@@ -69,7 +70,7 @@ Determinations neither need to be projected, nor need to be added to the UI meta
 
    As a result, when creating a new travel instance you can see the overall status is defaulted to `Open`. When you save the new instance, a travel ID as well as the total price is calculated.
   
-    ![Preview App](images/determination03.png)
+    ![Preview App](images/determination04.png)
 
 ## Summary
 

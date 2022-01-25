@@ -23,7 +23,10 @@ Therefore, you will first create the message class **`ZRAP_MSG_####`** to define
      
     ![Create the Message Class](images/validation03.png)
     
-4.	Assign a transport request and click **Finish**. The new message class editor opens. Create five messages with the numbers **001** to **005** and the short texts provided below.
+4.	Assign a transport request and click **Finish**. 
+    ![Create the Message Class](images/validation04.png)
+
+5. The new message class editor opens. Create five messages with the numbers **001** to **005** and the short texts provided below.
     
     <table>
     <tr> <td>001</td> <td>Begin date &1 must not be after end date &2 for travel &3</td> </tr>
@@ -36,15 +39,15 @@ Therefore, you will first create the message class **`ZRAP_MSG_####`** to define
 
     Your message class should look as follows:
     
-    ![Create the Message Class](images/validation04.png)
+    ![Create the Message Class](images/validation05.png)
     
-5.	Save ![save icon](images/adt_save.png) the new message class to activate it.
+6.	Save ![save icon](images/adt_save.png) the new message class to activate it.
  
 ## Exercise 9.2 - Exception Class
 
 1.	Right-click on your package **`ZRAP_TRAVEL_####`** and choose _**New > ABAP Class**_.
     
-    ![Create the Exception Class](images/validation05.png)
+    ![Create the Exception Class](images/validation06.png)
     
 2.	Maintain **`ZCM_RAP_####`** (where **`####`** is your group ID) as **name** and a **description** (e.g. **`RAP Messages`**).
     
@@ -52,13 +55,16 @@ Therefore, you will first create the message class **`ZRAP_MSG_####`** to define
     
     Choose **Next >**.
     
-    ![Create the Exception Class](images/validation06.png)
+    ![Create the Exception Class](images/validation07.png)
     
 3.	Assign a transport request and choose **Finish**. The ABAP class skeleton is generated and displayed in the editor.
      
-    ![Create the Exception Class](images/validation07.png)
+    ![Create the Exception Class](images/validation08.png)
+
+4.  The ABAP class skeleton is generated and displayed in the editor.
+    ![Create the Exception Class](images/validation09.png)
     
-4.	Replace the **entire** code of the exception class with the following coding and replace all occurrences of `####` with your group ID:
+5.	Replace the **entire** code of the exception class with the following coding and replace all occurrences of `####` with your group ID:
 
     > Note: In case you are using letters in your group ID, make sure to perform the replacement with **capital** letters.
 
@@ -66,7 +72,7 @@ Therefore, you will first create the message class **`ZRAP_MSG_####`** to define
 
     This defines five message constants for the five T100 messages the were defined before. It also specifies required variables for storing the message parameters. For parameters of type NUMC we perform an alpha conversion to remove leading zeros.
 
-5. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the exception class.
+6. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the exception class.
 
 ## Exercise 9.3 - Behavior Definition - Validation
 1. Open the base behavior definition **`ZI_RAP_Travel_####`** – where **`####`** is your group ID – of your business object by either double-clicking on it in the _Project Explorer_ or using the shortcut **Ctrl+Shift+A** (_Open ABAP Development Object_).
@@ -81,7 +87,7 @@ Therefore, you will first create the message class **`ZRAP_MSG_####`** to define
 
     Your base behavior definition should look as follows:
     
-    ![Actions](images/validation08.png)
+    ![Actions](images/validation10.png)
 
 3. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the behavior definition.
 
@@ -122,7 +128,7 @@ Further information can be found here: [Preparing Draft Instances for Activation
 
     Your base behavior definition should look as follows:
     
-    ![Actions](images/validation09.png)
+    ![Actions](images/validation011.png)
 
 3. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the behavior definition.
 
@@ -131,11 +137,11 @@ Further information can be found here: [Preparing Draft Instances for Activation
 
    As a result, when **saving** a travel instance with inconsistent data you can see corresponding error messages.
   
-    ![Preview App](images/validation10.png)
+    ![Preview App](images/validation12.png)
     
     In case you are getting an **Unspecified provider error occurred. See Error Context and Call Stack.** error, please ignore it. 
 
-    ![Error_Popup](images/validation11.png)
+    ![Error_Popup](images/validation13.png)
     
     This is a known backend problem that will be fixed with the upcoming release.
     

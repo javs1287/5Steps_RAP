@@ -20,6 +20,12 @@ We assume that you are familiar with working with ABAP CDS views. Further inform
 
 3. Assign a transport request and choose **Finish** (please note: clicking on **Next** in the _Selection of Transport Request_ step, you get to the optional _Templates_ step in which you can choose from predefined templates). 
 
+     ![Create Travel BO view](images/itravelCDS03.png)
+
+4. Optional Templates, if this screen appears choose Define View
+
+     ![Create Travel BO view](images/itravelCDS04.png)
+
     Replace the code of the travel data definition in the editor with the code snippet provided below and replace all occurrences of  `####` with your group ID. You can make use of the Replace All feature (**Ctrl+F**) in ADT for this purpose.
 
     <pre>
@@ -68,7 +74,7 @@ We assume that you are familiar with working with ABAP CDS views. Further inform
 
     The travel data definition should look as follows:
 
-    ![Create Travel BO view](images/itravelCDS03.png)
+    ![Create Travel BO view](images/itravelCDS05.png)
     
     Our composition model consists of two nodes: The root node travel and its child node booking. The root node is explicitly defined by adding the keyword **`root`** to the define statement. Associations that define the composition model are explicitly defined using the keyword **`composition`**. Their corresponding on-condition is defined in the child entity.
 
@@ -84,7 +90,13 @@ We assume that you are familiar with working with ABAP CDS views. Further inform
  
     ![Create Booking BO view](images/ibookingCDS02.png)
 
-3. Assign a transport request and choose **Finish**. Replace the code of the booking data definition in the editor with the code snippet provided below and replace all occurrences of  `####` with your group ID. You can make use of the Replace All feature (**Ctrl+F**) in ADT for this purpose.
+3. Assign a transport request and choose **Finish**. 
+    ![Create Booking BO view](images/ibookingCDS03.png)
+
+4. Select a Define View source code template
+    ![Create Booking BO view](images/ibookingCDS04.png)
+
+5. Replace the code of the booking data definition in the editor with the code snippet provided below and replace all occurrences of  `####` with your group ID. You can make use of the Replace All feature (**Ctrl+F**) in ADT for this purpose.
 
     <pre>
     @AccessControl.authorizationCheck: #CHECK
@@ -134,7 +146,7 @@ We assume that you are familiar with working with ABAP CDS views. Further inform
 
     The booking data definition should look as follows:
 
-    ![Create Booking BO view](images/ibookingCDS03.png)
+    ![Create Booking BO view](images/ibookingCDS05.png)
     
     In the child node, you define the corresponding **`to parent`** association with the related on-condition.
 

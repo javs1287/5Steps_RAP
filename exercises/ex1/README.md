@@ -7,25 +7,25 @@ In this exercise you will create two database tables to store the **travel** and
 
 The data model in this workshop consists of two transactional tables (**travel** and **booking**) as well as some master data that we will re-use from the already existing demo content (**Agency**, **Customer** and **Flight**), as well as a few more.
 
-![Data Model](images/datamodel01.png)
+![Data Model](images/datamodel_01.png)
 
 ## Exercise 1.1 - Create the Travel database table
 A Travel entity defines general travel data, such as the agency ID or customer ID, the overall status of the travel and the price of travel.   
 1. Right click on your package **`ZRAP_TRAVEL_####`** (where `####` is your group ID), choose **_New > Other ABAP Repository Object_** from the context menu.   
 
-   ![Create Database Table](images/traveltable01.png)
+   ![Create Database Table](images/traveltable_01.png)
 
 2. Enter `database` in the search field, choose **Database table** in the list and then choose **Next**.  
 
-   ![Create Database Table](images/traveltable02.png)
+   ![Create Database Table](images/traveltable_02.png)
 
 3. Provide **`ZRAP_ATRAV_####`** (where `####` is your group ID) as name and a description (e.g. *Travel data*) in the appearing dialog and choose **Next**.  
 
-   ![Create Database Table](images/traveltable03.png)
+   ![Create Database Table](images/traveltable_03.png)
 
 4. Assign a transport request and choose **Finish**. The table is created and a new editor with the defaulted content is opened. The table-specific technical settings are specified using annotations at the top.  
 
-   ![Create Database Table](images/traveltable04.png)  
+   ![Create Database Table](images/traveltable_04.png)  
 
 5. Replace the source code with the code snippet provided below and replace all occurrences of `####` with your group ID. You can make use of the Replace All feature (**Ctrl+F**) in ADT for this purpose. 
 
@@ -58,7 +58,7 @@ A Travel entity defines general travel data, such as the agency ID or customer I
     }
     </pre>
 
-   ![Create Database Table](images/traveltable05.png)  
+   ![Create Database Table](images/traveltable_05.png)  
 
     **Short explanation:**  
     - Some data elements from the ABAP Flight Reference Scenario (namespace `/DMO/`) are used.  
@@ -74,17 +74,20 @@ A Booking entity comprises general flight and booking data, the customer ID for 
   
 1. Right click on the **Database Tables** folder, choose **New Database Table** from the context menu.  
 
-   ![Create Database Table](images/bookingtable01.png)
+   ![Create Database Table](images/bookingtable_01.png)
 
 2. Maintain **`ZRAP_ABOOK_####`** (where `####` is your group ID) as name and a description (e.g. **_Booking data_**) in the appearing dialog and choose **Next**. 
 
-   ![Create Database Table](images/bookingtable02.png)
+   ![Create Database Table](images/bookingtable_02.png)
 
 3. Assign a transport request and choose **Finish**. The table is created and a new editor with the defaulted content is opened.
 
-   ![Create Database Table](images/bookingtable03.png)
+   ![Create Database Table](images/bookingtable_03.png)
 
-4. Replace the default source code with the code snippet provided below and replace all occurrences of  `####` with your group ID. You can make use of the Replace All feature (shortcut **Ctrl+F**) in ADT for this purpose.  
+4. The table is created and a new editor with the defaulted content is open
+   ![View Database Table in Eclipse](images/bookingtable_04.png)
+
+5. Replace the default source code with the code snippet provided below and replace all occurrences of  `####` with your group ID. You can make use of the Replace All feature (shortcut **Ctrl+F**) in ADT for this purpose.  
 
     <pre> 
     @EndUserText.label : 'Booking data'
@@ -111,27 +114,33 @@ A Booking entity comprises general flight and booking data, the customer ID for 
     }
     </pre>   
 
-    ![Create Database Table](images/bookingtable04.png)
+    ![Create Database Table](images_a/bookingtable05.png)
   
     **Short explanation:**
     - The table key consists of the `CLIENT` field and the `BOOKING_UUID` field which is a technical key (16 Byte UUID).   
     - A human-readable travel identifier: `BOOKING_ID`  
     - Some standard administrative fields are defined: `CREATED_BY`, `LAST_CHANGED_BY`, and `LOCAL_LAST_CHANGED_AT`.  
   
-5. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the changes.  
+6. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the changes.  
   
 ## Exercise 1.3 - Fill the Tables with Demo Data
 Create a little helper class to fill some demo data into the previously created tables. For this purpose, demo data provided by the ABAP Flight Reference Scenario (main package: `/DMO/FLIGHT`) will be used.   
   
 1. Right click on your package **ZRAP_TRAVEL_####** and choose **_New > ABAP Class_** from the context menu.      
 
-   ![Generate Demo Data](images/filltables01.png)
+   ![Generate Demo Data](images/filltables_01.png)
 
 2. Provide **`ZCL_GENERATE_DEMO_DATA_####`** (where `####` is your group ID) as name and a description (e.g. **_Generate travel and booking demo data_**) in the creation wizard for the new ABAP class and choose **Next**.
 
-    ![Generate Demo Data](images/filltables02.png)
+    ![Generate Demo Data](images/filltables_02.png)
 
-3. Assign a transport request and choose **Finish**. Replace the entire code with the snippet provided below and replace all occurrences of `####` with your group ID.
+3. Assign a transport request and choose **Finish**. 
+   ![Generate Demo Data](images/filltables_03.png)   
+
+4. Replace the entire code with the snippet provided below and replace all occurrences of #### with your group ID.
+   ![Generate Demo Data](images/filltables_04.png)   
+
+5.	Code snippet for step 4
 
     <pre> 
     CLASS zcl_generate_demo_data_#### DEFINITION
@@ -214,9 +223,10 @@ Create a little helper class to fill some demo data into the previously created 
   
 6. Press **F9** to run the ABAP class as a console application. As a result, you will see a success message in the console.
 
-   ![Generate Demo Data](images/filltables03.png)
+   ![Generate Demo Data](images/filltables_05.png)
 
 7. You can preview the data from the travel and booking tables. Choose the relevant table (`ZRAP_ATRAV_####` or `ZRAP_ABOOK_####`) in the Project Explorer and press **F8**. 
+![Preview Demo Data](images/filltables_06.png)
     
 ## Summary
 
